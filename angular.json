@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "outputPath": "dist/hostel".
+  "outputPath": "dist/hostel",
   "newProjectRoot": "projects",
   "projects": {
     "hostel": {
