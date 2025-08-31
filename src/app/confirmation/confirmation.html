@@ -1,0 +1,11 @@
+<div class="confirmation-container">
+  <h2>Booking Confirmation</h2>
+
+  <p *ngIf="studentName">
+    🎉 Congratulations <strong>{{ studentName }}</strong>! <br>
+    You have successfully booked Room <strong>{{ roomId }}</strong>.<br>
+    Roll Number: <strong>{{ rollNumber }}</strong>
+  </p>
+
+  <button (click)="goBack()">Back to Rooms</button>
+</div>

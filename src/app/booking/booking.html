@@ -1,0 +1,17 @@
+<div class="booking-container">
+  <h2>Booking Room {{ roomId }}</h2>
+
+  <!-- ✅ Form for booking only -->
+  <form (ngSubmit)="confirmBooking()" #bookingForm="ngForm">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="studentName" name="studentName" required placeholder="Your Name" />
+
+    <label>Roll Number:</label>
+    <input type="text" [(ngModel)]="rollNumber" name="rollNumber" required placeholder="Your Roll Number" />
+
+    <button type="submit" [disabled]="!bookingForm.form.valid">Confirm Booking</button>
+  </form>
+
+  <!-- ✅ Go Back button outside form -->
+  <button type="button" (click)="goBack()" class="back-button">Go Back to Rooms</button>
+</div>

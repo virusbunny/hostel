@@ -1,0 +1,13 @@
+<h2>Available Rooms</h2>
+<div class="grid">
+  <div *ngFor="let room of rooms" class="room-card">
+    <h3>{{ room.type }} (ID: {{ room.id }})</h3>
+    <p>Price: ₹{{ room.price }}</p>
+    <button [disabled]="isBooked(room.id)" (click)="bookRoom(room.id)">
+      {{ isBooked(room.id) ? 'Booked' : 'Book Now' }}
+    </button>
+  </div>
+</div>
+<div *ngIf="rooms.length === 0">
+  <p>No rooms available at the moment.</p>
+</div>
